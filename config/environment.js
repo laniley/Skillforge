@@ -25,6 +25,16 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV['torii'] = {
+      providers: {
+        'facebook-oauth2': {
+          apiKey: '627975950646452',
+          redirectUri: 'login-gateway'
+        }
+      }
+    };
+
   }
 
   if (environment === 'test') {
