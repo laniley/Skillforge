@@ -1,3 +1,14 @@
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 250px;
+  width: 600px;
+  margin-top: -125px;
+  margin-left: -300px;
+  text-align: center;
+}
+
 .login-title
 {
   font-family: Stonecross;
@@ -6,21 +17,15 @@
   color: black;
 }
 
-.login-button
+.fb-login-button
 {
-  // position: absolute;
-  // left: 50%;
-  // width: 400px;
-  // margin-left: -205px;
-
   border: 0;
   @include all_browser(border-radius, 5px);
-  padding: 5px;
+  padding: 5px 10px;
   color: white;
-  // background-color: $darkblue;
   font-family: Lucida, Tahoma, sans-serif;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 28px;
 
   cursor: pointer;
 
@@ -48,6 +53,6 @@
 
   .fa-facebook-square
   {
-    margin-right: 15px;
+    margin-right: 10px;
   }
 }

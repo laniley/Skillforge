@@ -17,3 +17,7 @@ $font-size-input: 18px;
          #{$prefix}#{$property}: $value;
      }
 }
+
+.align-center {
+  text-align: center;
+}
