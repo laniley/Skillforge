@@ -30,10 +30,25 @@ module.exports = function(environment) {
       providers: {
         'facebook-oauth2': {
           apiKey: '627975950646452',
-          redirectUri: 'http://localhost:4200/login-gateway'
+          redirectUri: 'http://localhost:4200/login'
         }
       }
     };
+
+    ENV['simple-auth'] = {
+      routeAfterAuthentication: 'login-gateway',
+      routeIfAlreadyAuthenticated: 'login-gateway'
+    };
+
+    // ENV['torii'] = {
+    //   providers: {
+    //     'facebook-connect': {
+    //       appId: '627975950646452',
+    //       scope: 'public_profile, user_friends'
+    //       //redirectUri: 'http://localhost:4200/login-gateway'
+    //     }
+    //   }
+    // };
 
   }
 
@@ -50,6 +65,15 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+
+    ENV['torii'] = {
+      providers: {
+        'facebook-oauth2': {
+          apiKey: '609402455837135',
+          redirectUri: 'http://meme-games.com/apps/skillforge/login-gateway'
+        }
+      }
+    };
 
   }
 

@@ -1,0 +1,19 @@
+$darkblue: #2A2C4C;
+$font-size-input: 18px;
+
+@font-face
+{
+  font-family: Stonecross;
+  src:  url('/assets/fonts/Stonecross.ttf') format('truetype'), /* Safari, Android, iOS, Chrome, Firefox */
+      url('/assets/fonts/Stonecross.woff') format('woff'); /*modern browsers*/
+}
+
+// needed for:
+// border-radius
+@mixin all_browser($property, $value)
+{
+     @each $prefix in -webkit-, -moz-, -ms-, -o-, ''
+     {
+         #{$prefix}#{$property}: $value;
+     }
+}

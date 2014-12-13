@@ -1,8 +1,11 @@
-<div id="login-container">
-  <div class="login-title">SKILLFORGE</div>
-  <!-- facebook login -->
-  <button class="fb-login-button" {{action "login"}}>{{unbound fa-icon "facebook-square"}} Log in with facebook</button>
+<div class="container-fluid">
+
+  <div id="login-container">
+    <div class="login-title">SKILLFORGE</div>
+    <!-- facebook login -->
+    <button class="fb-login-button" {{action "login"}}>{{unbound fa-icon "facebook-square"}} Log in with facebook</button>
+  </div>
+
+  {{outlet}}
+
 </div>
-
-
-{{outlet}}
