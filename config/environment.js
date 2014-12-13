@@ -30,7 +30,7 @@ module.exports = function(environment) {
       providers: {
         'facebook-oauth2': {
           apiKey: '627975950646452',
-          redirectUri: 'login-gateway'
+          redirectUri: 'http://localhost:4200/login-gateway'
         }
       }
     };
