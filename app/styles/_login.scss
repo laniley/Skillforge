@@ -4,17 +4,35 @@
   left: 50%;
   height: 250px;
   width: 600px;
-  margin-top: -125px;
   margin-left: -300px;
   text-align: center;
+
+  @media (min-width: 760px)
+  {
+    margin-top: -125px;
+  }
+
+  @media (max-width: 760px)
+  {
+    margin-top: -85px;
+  }
 }
 
 .login-title
 {
   font-family: Stonecross;
-  font-size: 5em;
   margin-bottom: 30px;
   color: black;
+
+  @media (min-width: 760px)
+  {
+    font-size: 5em;
+  }
+
+  @media (max-width: 760px)
+  {
+    font-size: 3em;
+  }
 }
 
 .fb-login-button
@@ -26,6 +44,16 @@
   font-family: Lucida, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 28px;
+
+  @media (min-width: 760px)
+  {
+    font-size: 28px;
+  }
+
+  @media (max-width: 760px)
+  {
+    font-size: 20px;
+  }
 
   cursor: pointer;
 
