@@ -1,7 +1,8 @@
-@import "variables";
 @import "bootstrap-custom";
+@import "variables";
 @import "login";
 @import "top_nav_bar";
+
 
 
 html, body {
@@ -13,6 +14,17 @@ html, body {
 body {
 
   font-family: Calibri, Arial, sans-serif;
+  color: $text-color;
+
+  // text not selectable
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  cursor: default;
 
   background: rgb(249,249,249); /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover,  rgba(249,249,249,1) 18%, rgba(191,255,248,1) 33%, rgba(115,177,209,1) 49%, rgba(42,44,76,1) 66%, rgba(17,25,40,1) 85%, rgba(25,0,0,1) 100%); /* FF3.6+ */

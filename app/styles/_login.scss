@@ -7,12 +7,12 @@
   margin-left: -300px;
   text-align: center;
 
-  @media (min-width: 760px)
+  @media (min-width: $screen-xs-min)
   {
     margin-top: -125px;
   }
 
-  @media (max-width: 760px)
+  @media (max-width: $screen-xs-max)
   {
     margin-top: -85px;
   }
