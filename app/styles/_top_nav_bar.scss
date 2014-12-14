@@ -64,7 +64,7 @@
 
   a {
 
-    @media (min-width: $screen-xs-min)
+    @media (min-width: $screen-sm-min)
     {
       line-height: 70px !important;
       padding: 5px !important;
@@ -135,15 +135,21 @@
     font-size: 22px;
   }
 
-  @media (max-width: $screen-sm-max)
+  @media (max-width: $screen-xs-max)
   {
     font-size: 20px;
   }
 
 }
 
-@media (min-width: $screen-sm-min) {
-    .navbar .navbar-collapse {
-        text-align: center;
-    }
+.navbar .navbar-collapse {
+
+  @media (min-width: $screen-sm-min) {
+    text-align: center;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    background: rgba(76, 78, 90, 0.5);
+  }
 }
+
