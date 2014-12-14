@@ -12,6 +12,19 @@
     {
       line-height: 20px !important;
     }
+
+    .link-label
+    {
+      @media (min-width: $screen-xs-min)
+      {
+        display: none !important;
+      }
+
+      @media (max-width: $screen-xs-max)
+      {
+        display: inline-block !important;
+      }
+    }
   }
 }
 
