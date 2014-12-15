@@ -36,8 +36,8 @@ module.exports = function(environment) {
     };
 
     ENV['simple-auth'] = {
-      routeAfterAuthentication: 'login-gateway',
-      routeIfAlreadyAuthenticated: 'login-gateway'
+      routeAfterAuthentication: 'members-area',
+      routeIfAlreadyAuthenticated: 'members-area'
     };
 
     // ENV['torii'] = {
@@ -45,7 +45,7 @@ module.exports = function(environment) {
     //     'facebook-connect': {
     //       appId: '627975950646452',
     //       scope: 'public_profile, user_friends'
-    //       //redirectUri: 'http://localhost:4200/login-gateway'
+    //       //redirectUri: 'http://localhost:4200/members-area'
     //     }
     //   }
     // };
@@ -70,7 +70,7 @@ module.exports = function(environment) {
       providers: {
         'facebook-oauth2': {
           apiKey: '609402455837135',
-          redirectUri: 'http://meme-games.com/apps/skillforge/login-gateway'
+          redirectUri: 'http://meme-games.com/apps/skillforge/members-area'
         }
       }
     };
