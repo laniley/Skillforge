@@ -6,6 +6,19 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+
+    // for the FB-SDK
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' use.typekit.net connect.facebook.net maps.googleapis.com maps.gstatic.com",
+      'font-src': "'self' data: use.typekit.net",
+      'connect-src': "'self'",
+      'img-src': "'self' www.facebook.com p.typekit.net",
+      'style-src': "'self' 'unsafe-inline' use.typekit.net",
+      'frame-src': "s-static.ak.facebook.com static.ak.facebook.com www.facebook.com",
+      'report-uri': '/_/csp-reports'
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -40,15 +53,15 @@ module.exports = function(environment) {
       routeIfAlreadyAuthenticated: 'members-area'
     };
 
-    // ENV['torii'] = {
-    //   providers: {
-    //     'facebook-connect': {
-    //       appId: '627975950646452',
-    //       scope: 'public_profile, user_friends'
-    //       //redirectUri: 'http://localhost:4200/members-area'
-    //     }
-    //   }
-    // };
+    ENV['torii'] = {
+      providers: {
+        'facebook-connect': {
+          appId: '627975950646452',
+          scope: 'public_profile, user_friends'
+          //redirectUri: 'http://localhost:4200/members-area'
+        }
+      }
+    };
 
   }
 
