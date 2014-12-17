@@ -10,7 +10,7 @@ module.exports = function(environment) {
     // for the FB-SDK
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' use.typekit.net connect.facebook.net maps.googleapis.com maps.gstatic.com",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' use.typekit.net connect.facebook.net graph.facebook.com maps.googleapis.com maps.gstatic.com",
       'font-src': "'self' data: use.typekit.net",
       'connect-src': "'self'",
       'img-src': "'self' www.facebook.com p.typekit.net",
@@ -44,6 +44,11 @@ module.exports = function(environment) {
         'facebook-oauth2': {
           apiKey: '627975950646452',
           redirectUri: 'http://localhost:4200/login'
+        },
+        'facebook-connect': {
+          appId: '627975950646452',
+          scope: 'public_profile, user_friends'
+          //redirectUri: 'http://localhost:4200/members-area'
         }
       }
     };
@@ -53,15 +58,15 @@ module.exports = function(environment) {
       routeIfAlreadyAuthenticated: 'members-area'
     };
 
-    ENV['torii'] = {
-      providers: {
-        'facebook-connect': {
-          appId: '627975950646452',
-          scope: 'public_profile, user_friends'
-          //redirectUri: 'http://localhost:4200/members-area'
-        }
-      }
-    };
+    // ENV['torii'] = {
+    //   providers: {
+    //     'facebook-connect': {
+    //       appId: '627975950646452',
+    //       scope: 'public_profile, user_friends'
+    //       //redirectUri: 'http://localhost:4200/members-area'
+    //     }
+    //   }
+    // };
 
   }
 

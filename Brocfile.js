@@ -8,4 +8,6 @@ var app = new EmberApp({
   }
 });
 
+app.import('vendor/facebook-sdk.js');
+
 module.exports = app.toTree();
