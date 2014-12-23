@@ -43,20 +43,18 @@ export default AuthenticateRoute.extend({
 
         console.log('Successful login for: ' + response.name);
 
-        // self.store.find('user', response.id);
-
         var user = self.store.createRecord('user', {
           id: response.id,
           name: response.name,
-          first_name: response.first_name,
+          // first_name: response.first_name,
           picture: response.picture.url
         });
 
-        controller.set('model', user);
-
-        user.save().then(function()
-        {alert('test');
-          self.store.find('user', response.id);
+        user.save().then
+        (
+          function()
+          {
+            controller.set('model', user);
           // loadCharacters();
 
           // loadUserData(function()
@@ -120,7 +118,12 @@ export default AuthenticateRoute.extend({
             //         }
             // });
           // });
-        });
+          },
+          function(resp)
+          {
+            console.log(resp);
+          }
+        );
 
         // $("#fb-like").html('<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fskillforgegame&amp;width=200&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=609402455837135" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>');
 
