@@ -11,7 +11,7 @@ export default AuthenticateRoute.extend({
 
     if(this.controllerFor('login').get('hasFacebook'))
     {
-      this.getUserInfosFromFB(controller);
+      this.getUserInfos(controller);
     }
     else
     {
@@ -20,12 +20,12 @@ export default AuthenticateRoute.extend({
         // accessToken.
         self.controllerFor('login').set('hasFacebook', true);
 
-        self.getUserInfosFromFB(controller);
+        self.getUserInfos(controller);
       });
     }
   },
 
-  getUserInfosFromFB: function(controller) {
+  getUserInfos: function(controller) {
 
     console.log('get user infos from FB');
 
@@ -51,6 +51,8 @@ export default AuthenticateRoute.extend({
           function()
           {
             controller.set('model', user);
+
+            self.transitionTo('members-area.characters.new');
           // loadCharacters();
 
           // loadUserData(function()
