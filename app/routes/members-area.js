@@ -12,8 +12,6 @@ export default AuthenticateRoute.extend({
     if(this.controllerFor('login').get('hasFacebook'))
     {
       this.getUserInfosFromFB(controller);
-
-      // return {id: "10201954938313738", name: "Melanie Mende", first_name: "Melanie"};
     }
     else
     {
@@ -23,8 +21,6 @@ export default AuthenticateRoute.extend({
         self.controllerFor('login').set('hasFacebook', true);
 
         self.getUserInfosFromFB(controller);
-
-        // return {id: "10201954938313738", name: "Melanie Mende", first_name: "Melanie"};
       });
     }
   },
@@ -47,7 +43,7 @@ export default AuthenticateRoute.extend({
           id: response.id,
           name: response.name,
           // first_name: response.first_name,
-          picture: response.picture.url
+          picture: response.picture.data.url
         });
 
         user.save().then

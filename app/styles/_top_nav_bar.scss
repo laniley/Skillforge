@@ -153,3 +153,25 @@
   }
 }
 
+.navbar-right {
+
+  @media (max-width: $screen-xs-max)
+  {
+    font-size: 20px;
+  }
+
+  .dropdown-toggle {
+    line-height: 40px;
+
+    img {
+      height: 35px;
+      @include all_browser(border-radius, 5px);
+
+      &:hover
+      {
+        box-shadow: 0px 0px 2px #fff;
+      }
+    }
+  }
+}
+
