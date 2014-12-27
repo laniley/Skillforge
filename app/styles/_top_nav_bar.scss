@@ -131,7 +131,7 @@
     display: inline-block;
     float: none;
     vertical-align: top;
-    margin-right: 150px;
+    margin-right: 85px;
     font-size: 22px;
   }
 
@@ -161,16 +161,31 @@
   }
 
   .dropdown-toggle {
-    line-height: 40px;
+
+    @media (min-width: $screen-sm-min) {
+      width: 150px;
+      margin-top: 20px;
+    }
 
     img {
       height: 35px;
+      float: left;
+      margin-right: 5px;
       @include all_browser(border-radius, 5px);
 
       &:hover
       {
         box-shadow: 0px 0px 2px #fff;
       }
+    }
+
+    .account_name {
+      line-height: 35px;
+
+      // @media (max-width: $screen-xs-max)
+      // {
+      //   font-size: 20px;
+      // }
     }
   }
 }
