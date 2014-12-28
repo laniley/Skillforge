@@ -31,18 +31,15 @@ export default AuthenticateRoute.extend({
 
     var self = this;
 
-    FB.api('/me', {fields: 'id,name,first_name,picture.width(120).height(120)'}, function(response)
+    FB.api('/me', {fields: 'id,name,picture.width(120).height(120)'}, function(response)
     {
       if( !response.error )
       {
-        console.log(response);
-
-        console.log('Successful login for: ' + response.name);
+        console.log('Successful login to FB for: ' + response.name);
 
         var user = self.store.createRecord('user', {
           id: response.id,
           name: response.name,
-          // first_name: response.first_name,
           picture: response.picture.data.url
         });
 
@@ -50,6 +47,8 @@ export default AuthenticateRoute.extend({
         (
           function()
           {
+            console.log('User saved ', user);
+
             controller.set('model', user);
 
             self.transitionTo('members-area.characters.new');
