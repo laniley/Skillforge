@@ -2,84 +2,84 @@
 
 <div class="row">
 
-  <div id="new_char_race" class="column col-xs-12 col-md-4 align-top race_select">
+  <div id="new_char_race" class="col-xs-12 col-md-4 align-top race_select">
     <h2>{{t 'character.race.name'}}</h2>
     <hr />
-    <div class="item human {{#if-equal race 'human'}}active{{/if-equal}}" onclick="set_race_active('human');">{{t 'character.race.human.name'}}</div>
-    <div class="item elf {{#if-equal race 'elf'}}active{{/if-equal}}" onclick="set_race_active('elf');">{{t 'character.race.elf.name'}}</div>
-    <div class="item dwarf {{#if-equal race 'dwarf'}}active{{/if-equal}}" onclick="set_race_active('dwarf');">{{t 'character.race.dwarf.name'}}</div>
-    <div class="item fairy {{#if-equal race 'fairy'}}active{{/if-equal}}" onclick="set_race_active('fairy');">{{t 'character.race.fairy.name'}}</div>
+    <div {{bind-attr class=":item model.isHuman:active"}} onclick="set_race_active('human');">{{t 'character.race.human.name'}}</div>
+    <div {{bind-attr class=":item model.isElf:active"}} onclick="set_race_active('elf');">{{t 'character.race.elf.name'}}</div>
+    <div {{bind-attr class=":item model.isDwarf:active"}} onclick="set_race_active('dwarf');">{{t 'character.race.dwarf.name'}}</div>
+    <div {{bind-attr class=":item model.isFairy:active"}} onclick="set_race_active('fairy');">{{t 'character.race.fairy.name'}}</div>
     <div class="info_text race">
-      {{#if-equal race 'human'}}
-        <div title="{{t "character.attributes.strength.description" }}">
-          + 1 {{t "character.attributes.strength.name" }}
+      {{#if model.isHuman}}
+        <div {{translateAttr title='character.attributes.strength.description' }}>
+          + 1 {{t 'character.attributes.strength.name' }}
         </div>
-        <div title="{{t "character.attributes.dexterity.description" }}">
+        <div {{translateAttr title='character.attributes.dexterity.description' }}>
           + 1 {{t "character.attributes.dexterity.name" }}
         </div>
-        <div title="{{t "character.attributes.endurance.description" }}">
+        <div {{translateAttr title='character.attributes.endurance.description' }}>
           + 2 {{t "character.attributes.endurance.name" }}
         </div>
         <br />
         {{t 'character.race.human.description'}}
-      {{/if-equal}}
-      {{#if-equal race 'elf'}}
-        <div title="{{t "character.attributes.wisdom.description" }}">
+      {{/if}}
+      {{#if model.isElf}}
+        <div {{translateAttr title='character.attributes.wisdom.description' }}>
           + 1 {{t "character.attributes.wisdom.name" }}
         </div>
-        <div title="{{t "character.attributes.dexterity.description" }}">
+        <div {{translateAttr title='character.attributes.dexterity.description' }}>
           + 2 {{t "character.attributes.dexterity.name" }}
         </div>
-        <div title="{{t "character.attributes.endurance.description" }}">
+        <div {{translateAttr title='character.attributes.endurance.description' }}>
           + 1 {{t "character.attributes.endurance.name" }}
         </div>
         <br />
         {{t 'character.race.elf.description'}}
-      {{/if-equal}}
-      {{#if-equal race 'dwarf'}}
-        <div title="{{t "character.attributes.strength.description" }}">
+      {{/if}}
+      {{#if model.isDwarf}}
+        <div {{translateAttr title='character.attributes.strength.description' }}>
           + 2 {{t "character.attributes.strength.name" }}
         </div>
-        <div title="{{t "character.attributes.defense.description" }}">
+        <div {{translateAttr title='character.attributes.defense.description' }}>
           + 2 {{t "character.attributes.defense.name" }}
         </div>
         <br />
         {{t 'character.race.dwarf.description'}}
-      {{/if-equal}}
-      {{#if-equal race 'fairy'}}
-        <div title="{{t "character.attributes.wisdom.description" }}">
+      {{/if}}
+      {{#if model.isFairy}}
+        <div {{translateAttr title='character.attributes.wisdom.description' }}>
           + 2 {{t "character.attributes.wisdom.name" }}
         </div>
-        <div title="{{t "character.attributes.willpower.description" }} {{t "character.attributes.concentration.description" }}">
+        <div {{translateAttr title='character.attributes.willpower.description' }}>
           + 2 {{t "character.attributes.willpower.name" }}
         </div>
         <br />
         {{t 'character.race.fairy.description'}}
-      {{/if-equal}}
+      {{/if}}
     </div>
   </div>
 
-  <div id="new_char_gender" class="column col-xs-12 col-md-4">
+  {{!-- <div id="new_char_gender" class="column col-xs-12 col-md-4">
     <div class="row gender_title">
       <div class="column col-md-6 align-top"><h2>{{t "character.gender.female.name" }}</h2></div>
       <div class="column col-md-6 align-top"><h2>{{t "character.gender.male.name" }}</h2></div>
     </div>
 
     <div class="column col-md-6 align-top new_char_gender female {{#if-equal gender 'female'}}active{{/if-equal}}" onclick="set_gender_active('female');">
-      {{!-- <img id="female_wappon" src="style/images/character/new/new_female_{{race}}_{{char_class}}.png" /> --}}
+      <img id="female_wappon" src="style/images/character/new/new_female_{{race}}_{{char_class}}.png" />
     </div>
 
     <div class="column col-md-6 align-top new_char_gender male {{#if-equal gender 'male'}}active{{/if-equal}}" onclick="set_gender_active('male');">
-      {{!-- <img id="male_wappon" src="style/images/character/new/new_male_{{race}}_{{char_class}}.png" /> --}}
+      <img id="male_wappon" src="style/images/character/new/new_male_{{race}}_{{char_class}}.png" />
     </div>
 
     <div id="customize-button" class="row only-larger-than-xs">
       <button onclick="hasher.setHash('section/characters/customize');">{{t "customize" }}</button>
     </div>
 
-  </div>
+  </div> --}}
 
-  <div id="new_char_class" class="column col-xs-12 col-md-4 align-top class_select">
+  {{!-- <div id="new_char_class" class="column col-xs-12 col-md-4 align-top class_select">
     <h2>{{t "character.class.name" }}</h2>
     <hr />
     <div class="item mage {{#if-equal char_class 'mage'}}active{{/if-equal}}" onclick="set_class_active('mage');">{{t "character.class.mage.name" }}</div>
@@ -199,10 +199,6 @@
       {{/if-equal}}
     </div>
 
-  </div>
-
-{{!--   <div id="customize-button" class="row only-smaller-than-sm">
-    <button onclick="hasher.setHash('section/characters/customize');">{{t "customize" }}</button>
   </div> --}}
 
 </div>

@@ -47,12 +47,31 @@ export default AuthenticateRoute.extend({
         (
           function()
           {
-            console.log('User saved ', user);
-
             controller.set('model', user);
 
-            self.transitionTo('members-area.characters.new');
-          // loadCharacters();
+            console.log('charachters', user.get('characters.length'));
+
+
+            // if(userModel.first_login)
+            //   self.transitionTo('members-area.settings');
+            if(user.get('characters.length') > 0)
+            {
+              self.transitionTo('members-area.characters');
+            }
+            else
+            {
+              var new_char = self.store.createRecord('character', {
+                name: '',
+                user: user,
+                race: 'human',
+                char_class: 'mage',
+                gender: 'female'
+              });
+
+              self.controllerFor('members-area.characters.new').set('model', new_char);
+
+              self.transitionTo('members-area.characters.new');
+            }
 
           // loadUserData(function()
           // {
@@ -123,8 +142,6 @@ export default AuthenticateRoute.extend({
         );
 
         // $("#fb-like").html('<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fskillforgegame&amp;width=200&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=609402455837135" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>');
-
-        // saveLoginToDB();
       }
       else
       {

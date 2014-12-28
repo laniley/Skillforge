@@ -11,9 +11,9 @@ Em.I18n.translations = {
   "header":
   {
     "character-creation":
-      {
-        "title": "NEUER CHARAKTER"
-      },
+    {
+      "title": "NEUER CHARAKTER"
+    },
     "settings":
     {
       "title": "EINSTELLUNGEN",
@@ -198,26 +198,26 @@ Em.I18n.translations = {
            "name": "Geschicklichkeit",
            "description": "Geschicklichkeit erhöht die Wahrscheinlichkeit kritischer Treffer und die Fähigkeit, gegnerischen Angriffen auszuweichen."
         },
-          "endurance":
-          {
-            "name": "Ausdauer",
-            "description": "Die Ausdauer eines Charakters legt die maximale Länge von Angriffsketten und die Regenerationsrate der Lebensenergie fest."
-          },
-          "strength":
-      {
-        "name": "Stärke",
-        "description": "Die Stärke eines Charakters entscheidet, welche Waffen und Rüstungen verwendet werden können und wie viel physischen Schaden ein Angriff verursacht."
-      },
-      "willpower":
-      {
-        "name": "Willenskraft",
-        "description": "Willenskraft erhöht den Schaden magischer Angriffe und die Konzentrationsfähigkeit."
-      },
-          "wisdom":
-          {
-            "name": "Weisheit",
-            "description": "Ein hohes Maß an Weisheit wird benötigt, um komplexe Zaubersprüche anzuwenden und um schnell neue Erfahrung zu sammeln und neues Wissen zu erlernen."
-          }
+        "endurance":
+        {
+          "name": "Ausdauer",
+          "description": "Die Ausdauer eines Charakters legt die maximale Länge von Angriffsketten und die Regenerationsrate der Lebensenergie fest."
+        },
+        "strength":
+        {
+          "name": "Stärke",
+          "description": "Die Stärke eines Charakters entscheidet, welche Waffen und Rüstungen verwendet werden können und wie viel physischen Schaden ein Angriff verursacht."
+        },
+        "willpower":
+        {
+          "name": "Willenskraft",
+          "description": "Willenskraft erhöht den Schaden magischer Angriffe und die Konzentrationsfähigkeit."
+        },
+        "wisdom":
+        {
+          "name": "Weisheit",
+          "description": "Ein hohes Maß an Weisheit wird benötigt, um komplexe Zaubersprüche anzuwenden und um schnell neue Erfahrung zu sammeln und neues Wissen zu erlernen."
+        }
     },
     "customization":
     {
