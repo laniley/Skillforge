@@ -6,12 +6,12 @@
       {
         a {
           background: none;
-          color: $text-color;
+          color: $header-text-color;
 
           &:hover
           {
             background: none;
-            color: $text-color;
+            color: $header-text-color;
             cursor: default;
           }
         }
@@ -48,10 +48,10 @@
       }
 
       a {
-        color: $text-color;
+        color: $header-text-color;
 
         &:hover {
-          color: $text-color;
+          color: $header-text-color;
         }
       }
     }
@@ -110,7 +110,7 @@
 .navbar-brand {
   font-family: Stonecross;
 
-  color: $text-color !important;
+  color: $header-text-color !important;
 
   @media (min-width: $screen-xs-min)
   {
@@ -181,11 +181,6 @@
 
     .account_name {
       line-height: 35px;
-
-      // @media (max-width: $screen-xs-max)
-      // {
-      //   font-size: 20px;
-      // }
     }
   }
 }

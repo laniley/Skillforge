@@ -65,13 +65,13 @@
       <div class="column col-md-6 align-top"><h2>{{t "character.gender.male.name" }}</h2></div>
     </div>
 
-    {{!-- <div class="column col-md-6 align-top new_char_gender female {{#if-equal gender 'female'}}active{{/if-equal}}" onclick="set_gender_active('female');">
-      <img id="female_wappon" src="style/images/character/new/new_female_{{race}}_{{char_class}}.png" />
+    <div class="column col-md-6 align-top new_char_gender female {{#if-equal gender 'female'}}active{{/if-equal}}" onclick="set_gender_active('female');">
+      {{!-- <img id="female_wappon" src="style/images/character/new/new_female_{{race}}_{{char_class}}.png" /> --}}
     </div>
 
     <div class="column col-md-6 align-top new_char_gender male {{#if-equal gender 'male'}}active{{/if-equal}}" onclick="set_gender_active('male');">
-      <img id="male_wappon" src="style/images/character/new/new_male_{{race}}_{{char_class}}.png" />
-    </div> --}}
+      {{!-- <img id="male_wappon" src="style/images/character/new/new_male_{{race}}_{{char_class}}.png" /> --}}
+    </div>
 
     <div id="customize-button" class="row only-larger-than-xs">
       <button onclick="hasher.setHash('section/characters/customize');">{{t "customize" }}</button>
@@ -79,7 +79,7 @@
 
   </div>
 
-{{!--   <div id="new_char_class" class="column col-xs-12 col-md-4 align-top class_select">
+  <div id="new_char_class" class="column col-xs-12 col-md-4 align-top class_select">
     <h2>{{t "character.class.name" }}</h2>
     <hr />
     <div class="item mage {{#if-equal char_class 'mage'}}active{{/if-equal}}" onclick="set_class_active('mage');">{{t "character.class.mage.name" }}</div>
@@ -199,10 +199,10 @@
       {{/if-equal}}
     </div>
 
-  </div> --}}
-
-  <div id="customize-button" class="row only-smaller-than-sm">
-    <button onclick="hasher.setHash('section/characters/customize');">{{t "customize" }}</button>
   </div>
+
+{{!--   <div id="customize-button" class="row only-smaller-than-sm">
+    <button onclick="hasher.setHash('section/characters/customize');">{{t "customize" }}</button>
+  </div> --}}
 
 </div>
