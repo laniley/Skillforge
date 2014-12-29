@@ -7,6 +7,7 @@ export default DS.Model.extend({
   char_class: DS.attr('string'),
   gender: DS.attr('string'),
 
+  // RACE-BINDED ATTRIBUTES
   isHuman: function() {
     if(this.get('race') === 'human')
     {
@@ -49,5 +50,37 @@ export default DS.Model.extend({
     {
       return false;
     }
-  }.property('race')
+  }.property('race'),
+
+  // GENDER-BINDED ATTRIBUTES
+  isMale: function() {
+    if(this.get('gender') === 'male')
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }.property('gender'),
+
+  isFemale: function() {
+    if(this.get('gender') === 'female')
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }.property('gender'),
+
+  newFemaleCharURL: function() {
+    return 'assets/images/character/new/new_female_' + this.get('race') + '_' + this.get('char_class') + '.png';
+  }.property('race','char_class'),
+
+  newMaleCharURL: function() {
+    return "assets/images/character/new/new_male_" + this.get('race') + "_" + this.get('char_class') + ".png";
+  }.property('race','char_class')
+
 });

@@ -2,7 +2,30 @@
 
 <div class="row">
 
-  <div id="new_char_race" class="col-xs-12 col-md-4 align-top race_select">
+  <div id="new_char_gender" class="col-xs-12 col-md-6 col-md-push-3">
+
+    <div class="row gender_title">
+      <div class="col-xs-6 align-top"><h2>{{t "character.gender.female.name" }}</h2></div>
+      <div class="col-xs-6 align-top"><h2>{{t "character.gender.male.name" }}</h2></div>
+    </div>
+
+    <div class="row gender_imgs">
+      <div {{bind-attr class=":col-xs-6 :align-top :new_char_gender :female model.isFemale:active"}} onclick="set_gender_active('female');">
+        <img id="new_char_female_img" {{bind-attr src=model.newFemaleCharURL}} />
+      </div>
+
+      <div {{bind-attr class=":col-xs-6 :align-top :new_char_gender :male model.isMale:active"}} onclick="set_gender_active('male');">
+        <img id="new_char_male_img" {{bind-attr src=model.newMaleCharURL}} />
+      </div>
+    </div>
+
+    <div id="customize-button" class="row only-larger-than-xs">
+      <button onclick="hasher.setHash('section/characters/customize');">{{t "customize" }}</button>
+    </div>
+
+  </div>
+
+  <div id="new_char_race" class="col-xs-12 col-md-3 col-md-pull-6 align-top race_select">
     <h2>{{t 'character.race.name'}}</h2>
     <hr />
     <div {{bind-attr class=":item model.isHuman:active"}} onclick="set_race_active('human');">{{t 'character.race.human.name'}}</div>
@@ -58,26 +81,6 @@
       {{/if}}
     </div>
   </div>
-
-  {{!-- <div id="new_char_gender" class="column col-xs-12 col-md-4">
-    <div class="row gender_title">
-      <div class="column col-md-6 align-top"><h2>{{t "character.gender.female.name" }}</h2></div>
-      <div class="column col-md-6 align-top"><h2>{{t "character.gender.male.name" }}</h2></div>
-    </div>
-
-    <div class="column col-md-6 align-top new_char_gender female {{#if-equal gender 'female'}}active{{/if-equal}}" onclick="set_gender_active('female');">
-      <img id="female_wappon" src="style/images/character/new/new_female_{{race}}_{{char_class}}.png" />
-    </div>
-
-    <div class="column col-md-6 align-top new_char_gender male {{#if-equal gender 'male'}}active{{/if-equal}}" onclick="set_gender_active('male');">
-      <img id="male_wappon" src="style/images/character/new/new_male_{{race}}_{{char_class}}.png" />
-    </div>
-
-    <div id="customize-button" class="row only-larger-than-xs">
-      <button onclick="hasher.setHash('section/characters/customize');">{{t "customize" }}</button>
-    </div>
-
-  </div> --}}
 
   {{!-- <div id="new_char_class" class="column col-xs-12 col-md-4 align-top class_select">
     <h2>{{t "character.class.name" }}</h2>
